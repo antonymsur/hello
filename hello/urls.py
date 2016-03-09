@@ -17,6 +17,6 @@ from django.conf.urls import url
 from helloservice.views import *
 
 urlpatterns = [
-   url(r'^hello/',hello),
-   url(r'',hello),
+    url(r'^hello/', hello),
+    url(r'', hello),
 ]
