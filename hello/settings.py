@@ -117,9 +117,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
 
-APP_ID = '454662'  #Client Identifier
+APP_ID = '684669'  #Client Identifier
 
-APP_SECRET = 'efdde43d201207c66a76251da9a5e48b'
+APP_SECRET = 'c2ff3c45aff8957aa08b7c640cdbd04c'
 
 LOGIN_URL = 'http://sample-oidcp.herokuapp.com/openid/authorize?response_type=code'
 
@@ -137,6 +137,6 @@ AUTH_PROTO = 'OIDC' #OR 'CAS' with LOGIN_URL  = "http://login.example.com:8080/l
 import logging
 
 logging.basicConfig(
-    level = logging.DEBUG,
-    format = " %(levelname)s %(name)s: %(message)s",
-)
+                    level=logging.DEBUG,
+                    format=" %(levelname)s %(name)s: %(message)s",
+                    )
