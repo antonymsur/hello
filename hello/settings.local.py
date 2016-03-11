@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'n@2%8s=ea6=gc=sx)$aos$&r5sk6@1h@amrk=4*8yb7+^1%p01'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -67,6 +67,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hello.wsgi.application'
 
+
+# Database
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#   }
+#}
+
+
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -109,11 +121,11 @@ APP_ID = '684669'  #Client Identifier
 
 APP_SECRET = 'c2ff3c45aff8957aa08b7c640cdbd04c'
 
-LOGIN_URL = 'http://sample-oidcp.herokuapp.com/openid/authorize?response_type=code'
+LOGIN_URL = 'http://localhost:8080/openid/authorize?response_type=code'
 
-APP_URL = 'http://samp-hello.herokuapp.com/hello' #where it needs to get redirected after succesful login/authN&Z
+APP_URL = 'http://localhost:8081/hello' #where it needs to get redirected after succesful login/authN&Z
 
-OID_TOKEN_URL = 'http://sample-oidcp.herokuapp.com/openid/token'
+OID_TOKEN_URL = 'http://localhost:8080/openid/token'
 
 AUTH_TYPE = 'code' #code id_token token , currently supports only code
 
